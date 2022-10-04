@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border:0;
+  }
+body{
+    background-color:#000000;
+    color:#ffffff
+  }
+/*side navigation styling*/
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position:fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-right: 5px solid #05ffa6;
+  }
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    margin: 80px 0 80px 0;
+  }
+  
+.sidenav a:hover {
+    color:#05ffa6 ;
+  }
+
+  /*Adding margin to the left side of all div to augument for the 
+  sidebar div width space*/
+#biosDiv,#imgDiv,#project,#skillDiv, #contact,#footer{
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+
+
+#home{
+  width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  margin-bottom: 6%;
+  
+  
+}
+.avatar {
+	width: 200px;
+	height: 200px;
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+}
+img { 
+  width: 100%; height: auto;
+ }
+ .typewriter h1{
+  color: #05ffa6;
+  font-size: 10rem;
+ }
+ .typewriter h3{
+  text-align: center;
+  font-size:3rem;
+ }
+ .typewriter h4{
+  text-align: center;
+  font-size:3rem;
+ }
+
+
+
+
+
+/* styling how my name and job title is displayed */
+  #myName{
+    font-family:"Qwitcher Grypen" ;
+    color: #05ffa6;
+  }
+  #jobTitle{
+    color:#05ffa6;
+  }
+  h1{
+    font-size: 50px;
+  }
+  /*about div */
+  
+  #biosDiv{
+    height:100%;
+    text-align:center;
+    margin-left:175px;
+    margin-bottom: 6%;
+
+  }
+ #mainAbout {
+  height:100%;
+  margin: 0 auto;
+  width:80%;
+  padding:3%;
+ }
+ /*project div*/
+ #project{
+    height:100%;
+  }
+ h2{
+    margin-left:3%;
+    text-decoration:underline #05ffa6 ;
+ }
+ /*card styling for indivual project*/
+ .cards {
+   
+    display: flex;
+    flex-flow: row wrap;
+    width: 70%;
+    height: auto;
+    margin: 30px auto;
+  }
+  .card {
+    flex: 2 0 0;
+    margin: 6%;
+    box-shadow: 0 20px 60px -6px #05ffa6 ;
+    width: 32%;
+    height: 80%;
+    border: 1px solid #ccc;
+    margin-right: 1%;
+    background: white;
+    border-radius: 10px;
+    transition: 0.9;
+  }
+  .card-title {
+    display: block;
+    text-align: center;
+    color: #fff;
+    background-color:#05ffa6 ;
+    padding: 2%;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+  .card img {
+    width: 100%;
+    height: 98%;
+    object-fit: cover;
+    display: grid;
+    position: relative;
+  }
+  /*description used to describe card'stech used and project
+  purpose*/
+ .card-desc {
+    display: grid;
+    position:relative;
+    height: 0;
+    top: 0;
+    opacity: 0;
+    padding: 18px 8%;
+    background-color: rgba(24, 26, 24, 1);
+    overflow-y: scroll;
+    transition: 0.8s ease;
+    font-size: 25px;
+    color:#05ffa6 ;
+  }
+  .card:hover .card-desc {
+    opacity: 1;
+    height: 100%;
+  }
+
+  /*Skills div*/
+#skillDiv {
+    height:100%;
+    margin-bottom:6% ;
+}
+.skill_container{
+        display: grid;
+        grid-template-columns: auto auto ;
+        gap:1em;
+        margin:4%;
+}
+/**progress bar creation and styling*/
+.skill_wrapper{
+  box-sizing: border-box;
+  width: 100%;
+  margin: 7%px 0;
+
+}
+.skill_wrapper p{
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 3%;
+  padding: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.skill_wrapper p:nth-child(2){
+  float: right;
+  position: relative;
+  top: -25px;
+}
+.bar{
+  background: #282828;
+  padding: 4px;
+  box-sizing: border-box;
+  border: 1px solid #0fffb7;
+  border-radius: 2px;
+}
+.skill_level{
+  background: #0fffb7;
+  width: 100%;
+  height: 10px;
+}
+.html_bar{
+  width:95%;
+}
+.css_bar{
+  width:80%;
+}
+.db_bar{
+  width:75%;
+}
+.js_bar,.php_bar{
+  width:70%;
+}
+.jq_bar{
+  width:65%;
+}
+.nj_bar{
+  width:60%;
+}
+.react_bar{
+  width:50%;
+}
+
+/*Contact div*/
+#contact{
+    height:100%;
+    margin-bottom: 6%;
+    
+}
+h5{
+  margin:4%;
+}
+#wrapper,#links {
+    margin: 3% auto 0;
+    width: 70%;
+    max-width: 1000px;
+    flex:2 0 0;
+}
+  form {
+    width:70%;
+    margin:3% ;
+  }
+  form * {
+    font-size: 20px;
+    letter-spacing: 0.075em;
+    font-weight: 300;
+    cursor: pointer;
+ 
+  }
+  form .field {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  form .field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #05ffa6, #052017);
+    width: 100%;
+    height: 60px;
+    transition: width 333ms ease-in-out;
+    text-align: center;
+    padding: 18px 0;
+  }
+  form .field input[type="text"],
+  form .field textarea {
+    border: none;
+    width: 80%;
+    height: 64px;
+    margin: 0;
+    padding-left: 19.5%;
+    color: #313a3d;
+  }
+  form #msg {
+    height: 64px;
+    resize: none;
+    transition: all 333ms ease-in-out;
+    padding-top: 18px;
+  }
+  form textarea:focus#msg,
+  form textarea:not(:placeholder-shown)#msg {
+    height: 166px;
+  }
+  form input[type="text"]:focus + label,
+  form input[type="text"]:not(:placeholder-shown) + label,
+  form textarea:focus + label,
+  form textarea:not(:placeholder-shown) + label,
+  form .field:hover label {
+    width: 18%;
+  }
+  form input[type="submit"] {
+    background: linear-gradient(90deg, #05ffa6, #052017);
+    -webkit-appearance: none;
+    border: none;
+    color:white;
+    position: relative;
+    padding: 13px 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  form input[type="submit"]:hover,
+  form input[type="submit"]:focus {
+    background: #54ffcc;  
+  }
+  
+
+  /*media queries*/
+  @media screen and (max-width:768px) { /*media query for tablet*/
+    
+  
+  .card{
+    
+      margin-bottom: 4%;
+      flex: 1 0 100%;
+  }
+  .skill_container{
+    grid-template-columns: auto;
+  }
+
+    
+  }
+  @media screen and (max-width:480px) { /*media query for mobile*/
+    
+  
+    .card{
+        
+        margin-bottom: 4%;
+        flex: 1 0 100%;
+    }
+    .skill_container{
+      grid-template-columns: auto;
+    }  
+
+    }
